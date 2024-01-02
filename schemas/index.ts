@@ -19,6 +19,16 @@ export const LoginSchema = z.object({
   password: z.string().trim().min(1, {
     message: "Password is required.",
   }),
+  code: z.optional(
+    z.coerce
+      .number()
+      .gte(100_000, {
+        message: "Invalid Code.",
+      })
+      .lte(1_000_000, {
+        message: "Invalid Code.",
+      })
+  ),
 });
 
 export const RegisterSchema = z.object({
