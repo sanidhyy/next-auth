@@ -8,9 +8,22 @@ import { RoleGate } from "@/components/auth/role-gate";
 import { FormSuccess } from "@/components/form-success";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { admin } from "@/actions/admin";
 
 const AdminPage = () => {
   const [isLoading, setIsLoading] = useState(false);
+
+  const onServerActionClick = () => {
+    setIsLoading(true);
+
+    admin()
+      .then((data) => {
+        if (data.error) toast.error(data.error);
+
+        if (data.success) toast.success(data.success);
+      })
+      .finally(() => setIsLoading(false));
+  };
 
   const onApiRouteClick = () => {
     setIsLoading(true);
@@ -48,7 +61,13 @@ const AdminPage = () => {
         <div className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-md">
           <p className="text-sm font-medium">Admin-only Server Action</p>
 
-          <Button>Click to test</Button>
+          <Button
+            onClick={onServerActionClick}
+            disabled={isLoading}
+            aria-disabled={isLoading}
+          >
+            Click to test
+          </Button>
         </div>
       </CardContent>
     </Card>
