@@ -41,12 +41,12 @@ export const RegisterForm = () => {
     setSuccess("");
 
     startTransition(() => {
-      register(values).then((data) => {
-        setError(data.error);
-        setSuccess(data.success);
-
-        form.resetField("password");
-      });
+      register(values)
+        .then((data) => {
+          setError(data.error);
+          setSuccess(data.success);
+        })
+        .finally(() => form.resetField("password"));
     });
   };
 
