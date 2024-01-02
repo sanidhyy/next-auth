@@ -3,6 +3,7 @@ import { SessionProvider } from "next-auth/react";
 import { Inter } from "next/font/google";
 
 import { auth } from "@/auth";
+import { Toaster } from "@/components/ui/sonner";
 
 import "./globals.css";
 
@@ -23,7 +24,13 @@ export default async function RootLayout({
   return (
     <SessionProvider session={session}>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <aside>
+            <Toaster />
+          </aside>
+
+          {children}
+        </body>
       </html>
     </SessionProvider>
   );
