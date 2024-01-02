@@ -2,7 +2,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const sendTwoFactorEmail = async (email: string, token: string) => {
+export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
   await resend.emails.send({
     from: process.env.RESEND_API_EMAIL!,
     to: email,
