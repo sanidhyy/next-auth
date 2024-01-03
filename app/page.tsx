@@ -15,7 +15,7 @@ export default function Home() {
       <div className="space-y-6 text-center">
         <h1
           className={cn(
-            "text-6xl font-semibold text-white drop-shadow-md",
+            "text-6xl font-semibold text-white drop-shadow-md select-none cursor-default",
             font.className
           )}
         >
