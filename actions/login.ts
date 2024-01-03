@@ -18,7 +18,7 @@ import { LoginSchema } from "@/schemas";
 
 export const login = async (
   values: z.infer<typeof LoginSchema>,
-  callbackUrl?: string
+  callbackUrl?: string,
 ) => {
   const validatedFields = LoginSchema.safeParse(values);
 
@@ -37,12 +37,12 @@ export const login = async (
 
   if (!existingUser.emailVerified) {
     const verificationToken = await generateVerificationToken(
-      existingUser.email
+      existingUser.email,
     );
 
     await sendVerificationEmail(
       verificationToken.email,
-      verificationToken.token
+      verificationToken.token,
     );
 
     return { success: "Confirmation email sent." };
@@ -68,7 +68,7 @@ export const login = async (
       });
 
       const existingConfirmation = await getTwoFactorConfirmationByUserId(
-        existingUser.id
+        existingUser.id,
       );
 
       if (existingConfirmation) {

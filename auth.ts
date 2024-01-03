@@ -43,7 +43,7 @@ export const {
       // check if two factor auth is enabled
       if (existingUser.isTwoFactorEnabled) {
         const twoFactorConfirmation = await getTwoFactorConfirmationByUserId(
-          existingUser.id
+          existingUser.id,
         );
 
         if (!twoFactorConfirmation) return false;

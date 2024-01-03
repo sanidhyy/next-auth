@@ -16,7 +16,7 @@ export default function Home() {
         <h1
           className={cn(
             "text-6xl font-semibold text-white drop-shadow-md select-none cursor-default",
-            font.className
+            font.className,
           )}
         >
           🔐 Auth
