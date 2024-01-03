@@ -54,6 +54,9 @@ const SettingsPage = () => {
   });
 
   const onSubmit = (values: z.infer<typeof SettingsSchema>) => {
+    setError("");
+    setSuccess("");
+
     startTransition(() => {
       settings(values)
         .then((data) => {
@@ -67,6 +70,7 @@ const SettingsPage = () => {
         .catch(() => setError("Something went wrong."));
     });
   };
+
   return (
     <Card className="w-[600px]">
       <CardHeader>
