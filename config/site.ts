@@ -44,3 +44,5 @@ export const siteConfig: Metadata = {
     url: "https://github.com/sanidhyy",
   },
 } as const;
+
+export const sourceCode = "https://github.com/sanidhyy/next-auth" as const;
