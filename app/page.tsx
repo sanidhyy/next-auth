@@ -1,7 +1,9 @@
 import { Poppins } from "next/font/google";
+import Link from "next/link";
 
 import { LoginButton } from "@/components/auth/login-button";
 import { Button } from "@/components/ui/button";
+import { sourceCode } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 const font = Poppins({
@@ -15,11 +17,19 @@ export default function Home() {
       <div className="space-y-6 text-center">
         <h1
           className={cn(
-            "text-6xl font-semibold text-white drop-shadow-md select-none cursor-default",
-            font.className,
+            "flex flex-col font-semibold text-white drop-shadow-md select-none",
+            font.className
           )}
         >
-          🔐 Auth
+          <span className="text-right text-6xl cursor-default">🔐 Auth</span>
+          <Link
+            href={sourceCode}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="text-xs text-right font-extrabold cursor-pointer drop-shadow-xl"
+          >
+            Source Code
+          </Link>
         </h1>
         <p className="text-white text-lg">A simple authentication service.</p>
 

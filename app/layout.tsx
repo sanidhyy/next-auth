@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 
 import { auth } from "@/auth";
 import { Toaster } from "@/components/ui/sonner";
-import { siteConfig } from "@/config";
+import { siteConfig } from "@/config/site";
 
 import "./globals.css";
 
