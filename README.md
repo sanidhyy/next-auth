@@ -300,6 +300,7 @@ You might encounter some bugs while using this app. You are more than welcome to
 
 Useful resources and dependencies that are used in Next.
 
+- Thanks to CodeWithAntonio: https://codewithantonio.com/
 - **[@prisma/client](https://www.npmjs.com/package/@prisma/client)**: ^5.7.0
 - **[@auth/prisma-adapter](https://www.npmjs.com/package/@auth/prisma-adapter)**: ^1.0.12
 - **[@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers)**: ^3.3.3
