@@ -35,6 +35,8 @@ export const {
       // allow oauth without email verification
       if (account?.provider !== "credentials") return true;
 
+      if (!user?.id) return false;
+
       const existingUser = await getUserById(user.id);
 
       // prevent sign in without email verification
@@ -67,7 +69,7 @@ export const {
       if (session.user)
         session.user.isTwoFactorEnabled = token.isTwoFactorEnabled as boolean;
 
-      if (session.user) {
+      if (session.user && token.email) {
         session.user.name = token.name;
         session.user.email = token.email;
         session.user.isOAuth = token.isOAuth as boolean;
@@ -93,7 +95,7 @@ export const {
       return token;
     },
   },
-  adapter: PrismaAdapter(db),
+  adapter: PrismaAdapter(db) as any,
   session: { strategy: "jwt" },
   ...authConfig,
 });

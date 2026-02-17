@@ -13,7 +13,7 @@ import { SettingsSchema } from "@/schemas";
 export const settings = async (values: z.infer<typeof SettingsSchema>) => {
   const user = await currentUser();
 
-  if (!user) return { error: "Unauthorized." };
+  if (!user?.id) return { error: "Unauthorized." };
 
   const dbUser = await getUserById(user.id);
 
