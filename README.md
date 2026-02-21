@@ -43,6 +43,8 @@
 
 Here is the folder structure of this app.
 
+<!--- FOLDER_STRUCTURE_START --->
+
 ```bash
 next-auth/
   |- actions/
@@ -123,6 +125,8 @@ next-auth/
   |- tsconfig.json
 ```
 
+<!--- FOLDER_STRUCTURE_END --->
+
 <br />
 
 ## :toolbox: Getting Started
@@ -161,12 +165,10 @@ RESEND_API_EMAIL="onboarding@resend.dev"
 5. Set up a Neon PostgreSQL Database
 
 1. **Obtain PostgreSQL Database URL:**
-
    - If you don't have a Neon PostgreSQL database, create one.
    - Obtain the database URL, which typically looks like `postgresql://<username>:<password>@<host>:<port>/<database-name>`.
 
 1. **Update `.env` with Database Configuration:**
-
    - Open your `.env` file.
    - Update the following variables with your Neon PostgreSQL database information:
 
@@ -181,12 +183,10 @@ RESEND_API_EMAIL="onboarding@resend.dev"
 1. Generate Authentication Secret
 
 1. **Generate Random Authentication Secret:**
-
    - Visit [generate-secret.vercel.app](https://generate-secret.vercel.app/32).
    - Copy the generated secret.
 
 1. **Update `.env` with Authentication Secret:**
-
    - Open your `.env` file.
    - Update the `AUTH_SECRET` variable with the generated secret:
 
@@ -200,7 +200,6 @@ RESEND_API_EMAIL="onboarding@resend.dev"
 1. Configure NextAuth Base URL
 
 1. **Set NextAuth Base URL:**
-
    - Open your `.env` file.
    - Set the `NEXTAUTH_URL` variable to the base URL of your Next.js application:
 
@@ -214,12 +213,10 @@ RESEND_API_EMAIL="onboarding@resend.dev"
 1. Obtain GitHub Authentication Keys
 
 1. **Register Application on GitHub:**
-
    - Go to the [GitHub Developer Settings](https://github.com/settings/developers) and register a new OAuth application.
    - Obtain the client ID and client secret.
 
 1. **Update `.env` with GitHub Keys:**
-
    - Open your `.env` file.
    - Update the following variables with the obtained GitHub keys:
 
@@ -234,12 +231,10 @@ RESEND_API_EMAIL="onboarding@resend.dev"
 1. Obtain Google Authentication Keys
 
 1. **Register Application on Google Cloud Console:**
-
    - Go to the [Google Cloud Console](https://console.cloud.google.com/) and create a new project.
    - Enable the "Google+ API" for your project and create credentials to obtain the client ID and client secret.
 
 1. **Update `.env` with Google Keys:**
-
    - Open your `.env` file.
    - Update the following variables with the obtained Google keys:
 
@@ -254,11 +249,9 @@ RESEND_API_EMAIL="onboarding@resend.dev"
 1. Set Up Resend API Key
 
 1. **Obtain Resend API Key and Email:**
-
    - Obtain an API key and email from Resend for onboarding purposes.
 
 1. **Update `.env` with Resend API Key and Email:**
-
    - Open your `.env` file.
    - Update the following variables with the obtained Resend API key and email:
 
@@ -301,6 +294,7 @@ You might encounter some bugs while using this app. You are more than welcome to
 Useful resources and dependencies that are used in Next.
 
 - Thanks to CodeWithAntonio: https://codewithantonio.com/
+<!--- DEPENDENCIES_START --->
 - **[@prisma/client](https://www.npmjs.com/package/@prisma/client)**: ^5.7.0
 - **[@auth/prisma-adapter](https://www.npmjs.com/package/@auth/prisma-adapter)**: ^1.0.12
 - **[@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers)**: ^3.3.3
@@ -343,6 +337,7 @@ Useful resources and dependencies that are used in Next.
 - **[prisma](https://www.npmjs.com/package/prisma)**: ^5.7.1
 - **[tailwindcss](https://www.npmjs.com/package/tailwindcss)**: ^3.3.0
 - **[typescript](https://www.npmjs.com/package/typescript)**: ^5
+<!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
 
