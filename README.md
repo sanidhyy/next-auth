@@ -44,7 +44,6 @@
 Here is the folder structure of this app.
 
 <!--- FOLDER_STRUCTURE_START --->
-
 ```bash
 next-auth/
   |- actions/
@@ -58,25 +57,13 @@ next-auth/
     |-- settings.ts
   |- app/
     |-- (protected)/
-        |--- _components/
-        |--- admin/
-        |--- client/
-        |--- server/
-        |--- settings/
-        |--- layout.tsx
     |-- api/
-        |--- admin/
-        |--- auth/[...nextauth]/
     |-- auth/
-        |--- error/
-        |--- login/
-        |--- new-password/
-        |--- new-verification/
-        |--- register/
-        |--- reset/
-        |--- layout.tsx
+    |-- apple-icon.png
     |-- favicon.ico
     |-- globals.css
+    |-- icon1.png
+    |-- icon2.png
     |-- layout.tsx
     |-- page.tsx
   |- components/
@@ -107,24 +94,24 @@ next-auth/
     |-- schema.prisma
   |- schemas/
     |-- index.ts
-  |- .env
   |- .env.example
+  |- .env/.env.local
   |- .eslintrc.json
   |- .gitignore
   |- auth.config.ts
   |- auth.ts
+  |- bun.lock
   |- components.json
   |- middleware.ts
+  |- netlify.toml
   |- next-auth.d.ts
   |- next.config.js
-  |- package-lock.json
   |- package.json
   |- postcss.config.js
   |- routes.ts
   |- tailwind.config.ts
   |- tsconfig.json
 ```
-
 <!--- FOLDER_STRUCTURE_END --->
 
 <br />
@@ -295,48 +282,49 @@ Useful resources and dependencies that are used in Next.
 
 - Thanks to CodeWithAntonio: https://codewithantonio.com/
 <!--- DEPENDENCIES_START --->
-- **[@prisma/client](https://www.npmjs.com/package/@prisma/client)**: ^5.7.0
-- **[@auth/prisma-adapter](https://www.npmjs.com/package/@auth/prisma-adapter)**: ^1.0.12
-- **[@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers)**: ^3.3.3
-- **[@radix-ui/react-avatar](https://www.npmjs.com/package/@radix-ui/react-avatar)**: ^1.0.4
-- **[@radix-ui/react-dialog](https://www.npmjs.com/package/@radix-ui/react-dialog)**: ^1.0.5
-- **[@radix-ui/react-dropdown-menu](https://www.npmjs.com/package/@radix-ui/react-dropdown-menu)**: ^2.0.6
-- **[@radix-ui/react-icons](https://www.npmjs.com/package/@radix-ui/react-icons)**: ^1.3.0
-- **[@radix-ui/react-label](https://www.npmjs.com/package/@radix-ui/react-label)**: ^2.0.2
-- **[@radix-ui/react-select](https://www.npmjs.com/package/@radix-ui/react-select)**: ^2.0.0
-- **[@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot)**: ^1.0.2
-- **[@radix-ui/react-switch](https://www.npmjs.com/package/@radix-ui/react-switch)**: ^1.0.3
-- **[bcrypt](https://www.npmjs.com/package/bcrypt)**: ^5.1.1
-- **[bcryptjs](https://www.npmjs.com/package/bcryptjs)**: ^2.4.3
-- **[class-variance-authority](https://www.npmjs.com/package/class-variance-authority)**: ^0.7.0
-- **[clsx](https://www.npmjs.com/package/clsx)**: ^2.1.0
-- **[next](https://www.npmjs.com/package/next)**: 14.0.4
-- **[next-auth](https://www.npmjs.com/package/next-auth)**: ^5.0.0-beta.4
-- **[next-themes](https://www.npmjs.com/package/next-themes)**: ^0.2.1
-- **[react](https://www.npmjs.com/package/react)**: ^18
-- **[react-dom](https://www.npmjs.com/package/react-dom)**: ^18
-- **[react-hook-form](https://www.npmjs.com/package/react-hook-form)**: ^7.49.2
-- **[react-icons](https://www.npmjs.com/package/react-icons)**: ^4.12.0
-- **[react-spinners](https://www.npmjs.com/package/react-spinners)**: ^0.13.8
-- **[resend](https://www.npmjs.com/package/resend)**: ^2.1.0
-- **[sonner](https://www.npmjs.com/package/sonner)**: ^1.3.1
-- **[tailwind-merge](https://www.npmjs.com/package/tailwind-merge)**: ^2.2.0
-- **[tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate)**: ^1.0.7
-- **[uuid](https://www.npmjs.com/package/uuid)**: ^9.0.1
-- **[zod](https://www.npmjs.com/package/zod)**: ^3.22.4
-- **[@types/bcrypt](https://www.npmjs.com/package/@types/bcrypt)**: ^5.0.2
-- **[@types/bcryptjs](https://www.npmjs.com/package/@types/bcryptjs)**: ^2.4.6
-- **[@types/node](https://www.npmjs.com/package/@types/node)**: ^20
-- **[@types/react](https://www.npmjs.com/package/@types/react)**: ^18
-- **[@types/react-dom](https://www.npmjs.com/package/@types/react-dom)**: ^18
-- **[@types/uuid](https://www.npmjs.com/package/@types/uuid)**: ^9.0.7
-- **[autoprefixer](https://www.npmjs.com/package/autoprefixer)**: ^10.0.1
-- **[eslint](https://www.npmjs.com/package/eslint)**: ^8
-- **[eslint-config-next](https://www.npmjs.com/package/eslint-config-next)**: 14.0.4
-- **[postcss](https://www.npmjs.com/package/postcss)**: ^8
-- **[prisma](https://www.npmjs.com/package/prisma)**: ^5.7.1
-- **[tailwindcss](https://www.npmjs.com/package/tailwindcss)**: ^3.3.0
-- **[typescript](https://www.npmjs.com/package/typescript)**: ^5
+- [@auth/prisma-adapter](https://www.npmjs.com/package/@auth/prisma-adapter): ^1.0.12
+- [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers): ^3.10.0
+- [@prisma/client](https://www.npmjs.com/package/@prisma/client): ^5.7.1
+- [@radix-ui/react-avatar](https://www.npmjs.com/package/@radix-ui/react-avatar): ^1.1.11
+- [@radix-ui/react-dialog](https://www.npmjs.com/package/@radix-ui/react-dialog): ^1.1.15
+- [@radix-ui/react-dropdown-menu](https://www.npmjs.com/package/@radix-ui/react-dropdown-menu): ^2.1.16
+- [@radix-ui/react-icons](https://www.npmjs.com/package/@radix-ui/react-icons): ^1.3.2
+- [@radix-ui/react-label](https://www.npmjs.com/package/@radix-ui/react-label): ^2.1.8
+- [@radix-ui/react-select](https://www.npmjs.com/package/@radix-ui/react-select): ^2.2.6
+- [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.2.4
+- [@radix-ui/react-switch](https://www.npmjs.com/package/@radix-ui/react-switch): ^1.2.6
+- [@types/bcrypt](https://www.npmjs.com/package/@types/bcrypt): ^6.0.0
+- [@types/bcryptjs](https://www.npmjs.com/package/@types/bcryptjs): ^3.0.0
+- [@types/node](https://www.npmjs.com/package/@types/node): ^25.2.3
+- [@types/react](https://www.npmjs.com/package/@types/react): ^19.2.14
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.2.3
+- [@types/uuid](https://www.npmjs.com/package/@types/uuid): ^11.0.0
+- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.24
+- [bcrypt](https://www.npmjs.com/package/bcrypt): ^6.0.0
+- [bcryptjs](https://www.npmjs.com/package/bcryptjs): ^3.0.3
+- [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
+- [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
+- [eslint](https://www.npmjs.com/package/eslint): ^8
+- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 14.0.4
+- [next](https://www.npmjs.com/package/next): 15.5.10
+- [next-auth](https://www.npmjs.com/package/next-auth): ^5.0.0-beta.4
+- [next-themes](https://www.npmjs.com/package/next-themes): ^0.4.6
+- [postcss](https://www.npmjs.com/package/postcss): ^8
+- [prisma](https://www.npmjs.com/package/prisma): ^5.7.1
+- [react](https://www.npmjs.com/package/react): ^19.2.4
+- [react-dom](https://www.npmjs.com/package/react-dom): ^19.2.4
+- [react-hook-form](https://www.npmjs.com/package/react-hook-form): ^7.71.1
+- [react-icons](https://www.npmjs.com/package/react-icons): ^5.5.0
+- [react-spinners](https://www.npmjs.com/package/react-spinners): ^0.17.0
+- [resend](https://www.npmjs.com/package/resend): ^6.9.2
+- [sonner](https://www.npmjs.com/package/sonner): ^1.7.4
+- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^2.2.0
+- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
+- [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
+- [typescript](https://www.npmjs.com/package/typescript): ^5.9.3
+- [uuid](https://www.npmjs.com/package/uuid): ^13.0.0
+- [zod](https://www.npmjs.com/package/zod): ^4.3.6
+
 <!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
