@@ -270,7 +270,7 @@ RESEND_API_EMAIL="onboarding@resend.dev"
 
 ## :wrench: Stats
 
-[![Stats for Next](/.github/images/stats.svg "Stats for Next")](https://pagespeed-insights-svg.glitch.me/?url=https://nextoauth.netlify.app/ "Stats for Next")
+[![Stats for Next](/.github/images/stats.svg "Stats for Next")](https://pagespeed.web.dev/analysis?url=https://nextoauth.netlify.app/ "Stats for Next")
 
 ## :raised_hands: Contribute
 
