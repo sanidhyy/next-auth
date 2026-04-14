@@ -306,7 +306,7 @@ Useful resources and dependencies that are used in Next.
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
 - [eslint](https://www.npmjs.com/package/eslint): ^8
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 14.0.4
-- [next](https://www.npmjs.com/package/next): 15.5.10
+- [next](https://www.npmjs.com/package/next): 15.5.15
 - [next-auth](https://www.npmjs.com/package/next-auth): ^5.0.0-beta.4
 - [next-themes](https://www.npmjs.com/package/next-themes): ^0.4.6
 - [postcss](https://www.npmjs.com/package/postcss): ^8
