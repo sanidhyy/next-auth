@@ -293,7 +293,7 @@ Useful resources and dependencies that are used in Next.
 - [@auth/prisma-adapter](https://www.npmjs.com/package/@auth/prisma-adapter): ^1.0.12
 - [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers): ^3.10.0
 - [@prisma/client](https://www.npmjs.com/package/@prisma/client): ^5.7.1
-- [@radix-ui/react-avatar](https://www.npmjs.com/package/@radix-ui/react-avatar): ^1.1.11
+- [@radix-ui/react-avatar](https://www.npmjs.com/package/@radix-ui/react-avatar): ^1.3.1
 - [@radix-ui/react-dialog](https://www.npmjs.com/package/@radix-ui/react-dialog): ^1.1.15
 - [@radix-ui/react-dropdown-menu](https://www.npmjs.com/package/@radix-ui/react-dropdown-menu): ^2.2.1
 - [@radix-ui/react-icons](https://www.npmjs.com/package/@radix-ui/react-icons): ^1.3.2
